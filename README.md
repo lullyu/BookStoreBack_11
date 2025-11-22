@@ -1,4 +1,4 @@
-# bookstoreback_11 - 在线书店系统后端实现
+# BookStoreBack_11 - 在线书店系统后端实现
 
 ![Java](https://img.shields.io/badge/Java-21-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-brightgreen)
@@ -6,13 +6,12 @@
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue)
 ![GitHub](https://img.shields.io/badge/GitHub-Open--Source-success)
 
-> **学号：2024131011** 
-
+> **学号：2024131011**
+> 
+> 一个基于Spring Boot和MySQL的完整在线书店系统后端API
 ## 项目概述
 
-**BookStore 11** 是一个基于Spring Boot和MySQL的完整在线书店系统后端解决方案。本项目采用现代化的软件开发实践，实现了电商平台的核心业务流程，包括用户管理、商品展示、购物车、订单处理等完整功能链。
-
-作为课程期末项目，本项目不仅实现了业务功能，更注重代码质量、架构设计和文档完整性，体现了软件工程的最佳实践。
+BookStoreBack_11是一个完整的在线书店系统后端服务，采用现代化的技术栈构建，提供稳定的RESTful API接口。项目涵盖了电商系统的核心业务流程，包括用户管理、商品展示、购物车、订单处理等完整功能。
 
 ## 核心特性
 
@@ -36,6 +35,13 @@
 - **响应式编程**：基于Spring Boot的响应式处理
 - **数据库优化**：JPA+Hibernate性能调优
 
+### 分层架构设计
+- **Controller层**：接收请求，参数校验，返回响应
+- **Service层**：业务逻辑处理，事务管理
+- **Repository层**：数据持久化操作
+- **Entity层**：数据模型定义，ORM映射
+
+
 ## 技术选型
 
 ### 后端技术栈
@@ -58,51 +64,51 @@
 
 ## 快速开始
 
-### 环境准备
+### 环境要求
 
-#### 系统要求
-- **操作系统**：Windows 10+/macOS 10.14+/Linux Ubuntu 16.04+
-- **内存**：至少 4GB RAM
-- **磁盘空间**：至少 2GB 可用空间
+- **JDK**: 21 或更高版本
+- **MySQL**: 8.0 或更高版本
+- **Maven**: 3.6 或更高版本
 
-#### 软件安装
-1. **安装JDK 21**
-   ```bash
-   # 验证安装
-   java -version
-   javac -version
+### 数据库配置
 
-2. **安装MySQL**
-#### 数据库配置
-1. **创建数据库**
-   ```bash
-   CREATE DATABASE liu CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+1. 创建数据库：
+   ```sql
+    CREATE DATABASE liu CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+2. 使用数据库
+   ```sql
    USE liu;
-### 应用配置
-1. **克隆项目**
-    ```bash
-   git clone https://github.com/你的用户名/bookstore_11.git
-   cd bookstore_11
-2. **修改配置文件**
-   *编辑 src/main/resources/application.properties：*
+3. 自动建表
+- 项目使用JPA自动建表功能
+
+- 首次运行时会自动创建所有数据表
+
+- 测试数据会自动插入
+
+### 运行步骤
+1. 克隆项目
    ```bash
-   server.port=8080
-   server.servlet.context-path=/api
+   git clone https://github.com/lullyu/BookStoreBack_11.git
+   cd BookStoreBack_11
+2. 配置数据库连接 编辑 src/main/resources/application.properties：
 
-   spring.datasource.url=jdbc:mysql://localhost:3306/liu?useSSL=false&serverTimezone=Asia/Shanghai
-   spring.datasource.username=root
-   spring.datasource.password=你的密码
+    ```bash
+   # 数据库连接配置
+   spring.datasource.url=jdbc:mysql://localhost:3306/liu?useSSL=false&serverTimezone=UTC
+   spring.datasource.username=你的MySQL用户名
+   spring.datasource.password=你的MySQL密码
 
-   spring.jpa.hibernate.ddl-auto=update
-   spring.jpa.show-sql=true
-### 运行项目
-1.打开IntelliJ IDEA
-
-2.导入项目
-
-3.找到 BookstoreApplication.java
-
-4.右键 → Run 'BookstoreApplication.main()'
+    # JPA配置
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+    spring.jpa.properties.hibernate.format_sql=true
+3. 运行项目
+- 打开 BookstoreApplication.java
+- 右键点击 → Run 'BookstoreApplication.main()'
+- 等待控制台显示 Started BookstoreApplication
+4. 验证安装
+   ```bash
+   http://localhost:8080/api/books
 ## API文档
 详细API文档请查看：API接口文档
 ## 核心功能
@@ -141,5 +147,10 @@
 - 感谢课程老师的指导
 
 - 感谢同学们的测试反馈
- ```<div align="center">
-如果这个项目对你有帮助，请给它一个 ⭐ Star 支持！
+
+
+
+## 如果这个项目对你有帮助，请给它一个 ⭐ Star 支持！
+
+
+
