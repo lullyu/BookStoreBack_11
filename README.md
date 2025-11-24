@@ -1,10 +1,6 @@
 # BookStoreBack_11 - 在线书店系统后端实现
 
-![Java](https://img.shields.io/badge/Java-21-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-brightgreen)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
-![License](https://img.shields.io/badge/License-Apache%202.0-blue)
-![GitHub](https://img.shields.io/badge/GitHub-Open--Source-success)
+
 
 > **学号：2024131011**
 > 
@@ -104,9 +100,12 @@ BookStoreBack_11是一个完整的在线书店系统后端服务，采用现代�
     spring.jpa.show-sql=true
     spring.jpa.properties.hibernate.format_sql=true
 3. 运行项目
-- 打开 BookstoreApplication.java
-- 右键点击 → Run 'BookstoreApplication.main()'
-- 等待控制台显示 Started BookstoreApplication
+
+打开 BookstoreApplication.java
+
+右键点击 → Run 'BookstoreApplication.main()'
+
+等待控制台显示 Started BookstoreApplication
 4. 验证安装
    ```bash
    http://localhost:8080/api/books
