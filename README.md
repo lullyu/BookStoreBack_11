@@ -106,8 +106,9 @@ BookStoreBack_11是一个完整的在线书店系统后端服务，采用现代�
 右键点击 → Run 'BookstoreApplication.main()'
 
 等待控制台显示 Started BookstoreApplication
+
 4. 验证安装
-   ```bash
+  
    http://localhost:8080/api/books
 ## API文档
 详细API文档请查看：API接口文档
